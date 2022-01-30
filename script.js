@@ -1,18 +1,18 @@
-let title = "JS";
-console.log(typeof title);
-
+const title = "JS";
 let screens = "Простые, Сложные, Интерактивные";
-console.log(screens.length);
-console.log(screens.toLowerCase());
-console.log(screens.split(", "));
+const screenPrice = 12;
+const rollback = 78;
+const fullPrice = 2000;
+const adaptive = true;
 
-let screenPrice = 12;
-let rollback = 78;
-let fullPrice = 2000;
+
+console.log(typeof title);
 console.log(typeof fullPrice);
-console.log(fullPrice*(rollback/100));
+console.log(typeof adaptive);
+console.log(screens.length);
 console.log("Стоимость верстки экранов " + (screenPrice) + " рублей/долларов/гривен/юаней");
 console.log("Стоимость разработки сайта " + (fullPrice) + " рублей/долларов/гривен/юаней");
-
-let adaptive = true;
-console.log(typeof adaptive);
+screens = screens.toLowerCase();
+console.log(screens);
+console.log(screens.split(", "));
+console.log(fullPrice*(rollback/100));
