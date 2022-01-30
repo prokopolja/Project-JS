@@ -12,7 +12,5 @@ console.log(typeof adaptive);
 console.log(screens.length);
 console.log("Стоимость верстки экранов " + (screenPrice) + " рублей/долларов/гривен/юаней");
 console.log("Стоимость разработки сайта " + (fullPrice) + " рублей/долларов/гривен/юаней");
-screens = screens.toLowerCase();
-console.log(screens);
-console.log(screens.split(", "));
+console.log(screens.toLowerCase().split(", "));
 console.log(fullPrice*(rollback/100));
