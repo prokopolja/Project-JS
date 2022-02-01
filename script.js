@@ -2,17 +2,17 @@
 
 const title = prompt ('Как называется наш проект?');
 const screens = prompt ("Какие типы экранов нужно разработать? (пример: Простые, Сложные, Интерактивные)");
-let screenPrice = +prompt ("Сколько будет стоить данная работа?");
-const adaptive = prompt ("Нужен ли адаптив на сайте?");
+const screenPrice = +prompt ("Сколько будет стоить данная работа?");
+const adaptive = confirm ("Нужен ли адаптив на сайте?");
 
 const service1 = prompt ("Какой дополнительный тип услуги нужен? (например service1, service2)");
-let servicePrice1 = +prompt ("Сколько это будет стоить?");
+const servicePrice1 = +prompt ("Сколько это будет стоить?");
 
 const service2 = prompt ("Какой дополнительный тип услуги нужен? (например service1, service2)");
-let servicePrice2 = +prompt ("Сколько это будет стоить?");
-let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+const servicePrice2 = +prompt ("Сколько это будет стоить?");
+const fullPrice = screenPrice + servicePrice1 + servicePrice2;
 const rollback = 18;
-let servicePercentPrice = fullPrice - (fullPrice*rollback/100);
+const servicePercentPrice = fullPrice - (fullPrice*rollback/100);
 
 
 
@@ -27,6 +27,22 @@ console.log(service2);
 console.log(servicePrice2);
 console.log(fullPrice);
 console.log(Math.ceil(servicePercentPrice));
+
+
+switch (true) {
+  case fullPrice >= 30000:
+    console.log("Даем скидку в 10%");
+    break;
+  case 15000 <= fullPrice && fullPrice < 30000:
+    console.log("Даем скидку в 5%");
+    break;
+  case 0 <= fullPrice && fullPrice < 15000:
+    console.log("Скидка не предусмотрена");
+    break;  
+  default:
+    console.log("Что-то пошло не так");
+    break;
+}
 
 if (fullPrice >= 30000) {
   console.log("Даем скидку в 10%");
